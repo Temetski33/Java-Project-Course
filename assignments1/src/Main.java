@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer();
@@ -5,10 +7,15 @@ public class Main {
         System.out.println("Id is " + customer.getId());
 
         customer.setStartTime(System.currentTimeMillis());
+
+        System.out.println("Input something: ");
+        Scanner reader = new Scanner(System.in);
+        String input = reader.nextLine();
+
         customer.setEndTime(System.currentTimeMillis());
 
-        System.out.println(customer.getStartTime());
-        System.out.println(customer.getTimeSpent());
+        System.out.println("Start time is " + customer.getStartTime());
+        System.out.println(customer.getTimeSpent() + " milliseconds");
 
         Customer customer2 = new Customer();
         System.out.println("Id is " +customer2.getId());

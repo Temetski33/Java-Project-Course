@@ -30,11 +30,16 @@ public class Task1_4 {
                 System.out.println();
 
             } else if (input.equals("dequeue")) {
+                // error handling
+                if (queue.isEmpty()) {
+                    System.out.println("Cannot dequeue empty queue");
+                    break;
+                }
                 // set end time for the customer about to be removed
                 queue.getLast().setEndTime(System.currentTimeMillis());
                 // count time spent
                 System.out.println("Customer " + queue.getLast().getId() + " Id time spent: " + queue.getLast().getTimeSpent() + " milliseconds.");
-
+                // remove the customer from queue
                 queue.removeLast();
 
                 System.out.println("Input action \"queue\", \"dequeue\" or \"exit\": ");
@@ -42,7 +47,9 @@ public class Task1_4 {
                 System.out.println();
             }
             else {
+                // error handling
                 System.out.println("Error! Invalid input.");
+                break;
             }
         }
 

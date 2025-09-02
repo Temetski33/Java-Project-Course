@@ -22,16 +22,16 @@ public class Customer {
         return startTime;
     }
 
-    public void setStartTime() {
-        this.startTime = System.currentTimeMillis();
+    public void setStartTime(long startTime) {
+        this.startTime = startTime;
     }
 
     public long getEndTime() {
         return endTime;
     }
 
-    public void setEndTime() {
-        this.endTime = System.currentTimeMillis();
+    public void setEndTime(long endTime) {
+        this.endTime = endTime;
     }
 
     public long getTimeSpent() {

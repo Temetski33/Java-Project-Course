@@ -2,7 +2,6 @@ public class Customer {
     private int id;
     private long startTime;
     private long endTime;
-    private long timeSpent;
 
     private static int newId = 1;
 
@@ -35,8 +34,6 @@ public class Customer {
     }
 
     public long getTimeSpent() {
-        this.timeSpent = endTime - startTime;
-
-        return timeSpent;
+        return endTime - startTime;
     }
 }

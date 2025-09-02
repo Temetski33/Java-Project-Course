@@ -9,6 +9,7 @@ public class Task1_4 {
 
         System.out.println("Welcome to queue simulator.");
         System.out.println();
+
         System.out.println("Input action \"queue\", \"dequeue\" or \"exit\": ");
         Scanner reader = new Scanner(System.in);
         String input = reader.nextLine();
@@ -32,7 +33,7 @@ public class Task1_4 {
             } else if (input.equals("dequeue")) {
                 // error handling
                 if (queue.isEmpty()) {
-                    System.out.println("Cannot dequeue empty queue");
+                    System.out.println("Cannot dequeue empty queue!");
                     break;
                 }
                 // set end time for the customer about to be removed

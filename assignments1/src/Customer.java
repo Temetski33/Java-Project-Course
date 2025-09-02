@@ -2,6 +2,13 @@ public class Customer {
     private int id;
     private long startTime;
     private long endTime;
+    private long timeSpent;
+
+    private static int newId = 1;
+
+    public Customer() {
+        this.id = newId++;
+    }
 
     public int getId() {
         return id;
@@ -25,5 +32,11 @@ public class Customer {
 
     public void setEndTime(long endTime) {
         this.endTime = endTime;
+    }
+
+    public long getTimeSpent() {
+        this.timeSpent = endTime - startTime;
+
+        return timeSpent;
     }
 }

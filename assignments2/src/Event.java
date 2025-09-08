@@ -1,13 +1,18 @@
 public class Event implements Comparable<Event> {
-    private String key;
+    private EventType key;
     private int value;
 
-    public Event(String key, int value) {
+    public enum EventType {
+        ARRIVAL,
+        EXIT
+    }
+
+    public Event(EventType key, int value) {
         this.key = key;
         this.value = value;
     }
 
-    public String getKey() {
+    public EventType getKey() {
         return key;
     }
 

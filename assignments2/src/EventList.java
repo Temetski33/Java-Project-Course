@@ -5,10 +5,10 @@ public class EventList {
     public static void main(String[] args) {
         PriorityQueue<Event> events = new PriorityQueue<>();
 
-        events.add(new Event("ARRIVAL", 6));
-        events.add(new Event("EXIT", 9));
-        events.add(new Event("ARRIVAL", 7));
-        events.add(new Event("EXIT", 4));
+        events.add(new Event(Event.EventType.EXIT, 6));
+        events.add(new Event(Event.EventType.EXIT, 9));
+        events.add(new Event(Event.EventType.ARRIVAL, 7));
+        events.add(new Event(Event.EventType.ARRIVAL, 4));
 
         Event nextEvent = events.poll();
         System.out.println("Removing event " + nextEvent.getKey() + " from the list (time: " + nextEvent.getValue() + ").");

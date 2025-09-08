@@ -10,6 +10,12 @@ public class EventList {
         events.add(new Event("A3", 7));
         events.add(new Event("A4", 4));
 
+        Event nextEvent = events.poll();
+        System.out.println("Removing event " + nextEvent.getKey() + " from the list.");
+
+        System.out.println();
+        System.out.println("Printing event list:");
+
         Event[] eventArray = events.toArray(new Event[events.size()]);
         Arrays.sort(eventArray, events.comparator());
         for (Event e : eventArray) {

@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class EventList {
@@ -9,11 +10,10 @@ public class EventList {
         events.add(new Event("A3", 7));
         events.add(new Event("A4", 4));
 
-        System.out.println(events);
-
-        while (!events.isEmpty()) {
-            Event firstInLine = events.poll();
-            System.out.println(firstInLine.getKey() + " " + firstInLine.getValue());
+        Event[] eventArray = events.toArray(new Event[events.size()]);
+        Arrays.sort(eventArray, events.comparator());
+        for (Event e : eventArray) {
+            System.out.println(e.getKey() + " " + e.getValue());
         }
     }
 }

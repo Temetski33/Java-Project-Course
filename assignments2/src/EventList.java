@@ -10,6 +10,9 @@ public class EventList {
         events.add(new Event(Event.EventType.ARRIVAL, 7));
         events.add(new Event(Event.EventType.ARRIVAL, 4));
 
+        System.out.println("Created event list.");
+        System.out.println();
+
         Event nextEvent = events.poll();
         System.out.println("Removing event " + nextEvent.getKey() + " from the list (time: " + nextEvent.getValue() + ").");
 

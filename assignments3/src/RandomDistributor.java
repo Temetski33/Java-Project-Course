@@ -5,7 +5,7 @@ import java.util.Collections;
 public class RandomDistributor {
     public static void main(String[] args) {
         ArrayList<Integer> ages = new ArrayList<>();
-        ArrayList<Integer> randomList = new ArrayList<>();
+        ArrayList<Integer> randomAges = new ArrayList<>();
 
 
         ages.addAll(Arrays.asList(19,19,20,20,20,20,21,21));
@@ -14,27 +14,35 @@ public class RandomDistributor {
         ages.addAll(Arrays.asList(26,27,28,28,28,29,30,31,32,32));
         int studentCount = ages.size();
 
+        System.out.println("Original age distribution:");
+
         for (int i = 19; i <= 32; i++){
-            int count = Collections.frequency(ages, i);
-            double percentage = ((double) count / studentCount) * 100;
+            int ageCount = Collections.frequency(ages, i);
+            double percentage = ((double) ageCount / studentCount) * 100;
 
             System.out.printf("%d years: %.2f", i, percentage);
-            System.out.print("%");
-            System.out.println();
+            System.out.print("% \n");
         }
 
+        int iterations = 1000;
 
 
-
-
-        for (int i = 1; i <= 10; i++){
+        for (int i = 1; i <= iterations; i++){
             int x = (int)(Math.random()* (studentCount)); // Random number from 0 to array size minus 1
             int sers = ages.get(x);
-            randomList.add(sers);
-            System.out.println(sers);
+            randomAges.add(sers);
         }
 
-        System.out.println(randomList);
+        System.out.println("\nRandom generated age distribution:");
+
+        for (int i = 19; i <= 32; i++){
+            int ageCount = Collections.frequency(randomAges, i);
+            double percentage = ((double) ageCount / iterations) * 100;
+
+            System.out.printf("%d years: %.2f", i, percentage);
+            System.out.print("% \n");
+        }
+
     }
 
 }

@@ -27,3 +27,33 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/lib/distributions/Bernoulli.java
+/lib/distributions/Beta.java
+/lib/distributions/BetaPrime.java
+/lib/distributions/Binomial.java
+/lib/distributions/Cauchy.java
+/lib/distributions/ChiSquare.java
+/lib/distributions/ContinuousGenerator.java
+/lib/distributions/DiscreteGenerator.java
+/lib/distributions/Distributions.java
+/lib/distributions/Erlang.java
+/lib/distributions/FDistribution.java
+/lib/distributions/Gamma.java
+/lib/distributions/Generator.java
+/lib/distributions/Geometric.java
+/lib/distributions/Invgamma.java
+/lib/distributions/Logistic.java
+/lib/distributions/LogNormal.java
+/lib/distributions/MetaGenerator.java
+/lib/distributions/Negexp.java
+/lib/distributions/Normal.java
+/lib/distributions/ParameterException.java
+/lib/distributions/Pareto.java
+/lib/distributions/Pascal.java
+/lib/distributions/Poisson.java
+/lib/distributions/RandomGenerator.java
+/lib/distributions/Seedable.java
+/lib/distributions/SeedGenerator.java
+/lib/distributions/Tstudent.java
+/lib/distributions/Uniform.java
+/lib/distributions/Weibull.java
